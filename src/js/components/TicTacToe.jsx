@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Box from "./Box"
 
 
-  // GANADORES
+// GANADORES
 const winningComb = [
   [0, 1, 2],
   [3, 4, 5],
@@ -31,7 +31,6 @@ const TicTacToe = () => {
   const [winner, setWinner] = useState(null);
 
 
-
   const handleClick = (i) => {
     if (squares[i] || winner) return;
 
@@ -39,9 +38,9 @@ const TicTacToe = () => {
     newSquares[i] = next ? "X" : "O";
     setSquares(newSquares);
     setNext(!next);
-    
+
     const result = getWinner(newSquares);
-    if (result){
+    if (result) {
       setWinner(result);
     }
   };
@@ -52,11 +51,15 @@ const TicTacToe = () => {
     setWinner(null);
   };
 
-  const status = winner
-    ? `Ganador: ${winner}`
-    : squares.every(Boolean)
-    ? "Empate"
-    : `Turno : ${next ? "X" : "O"}`;
+  let status;
+
+  if (winner) {
+    status = `Ganador: ${winner}`;
+  } else if (squares.every(Boolean)) {
+    status = "Empate";
+  } else {
+    status = `Turno : ${next ? "X" : "O"}`;
+  }
 
   return (
     <div className="game text-center">

@@ -1,36 +1,28 @@
-/* 
+body {
+    background-color: #787878;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
 
 /*TABLERO*/
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 60px);
+    grid-template-columns: repeat(3, 200px);
     margin: 20px;
     justify-content: center;
 }
 
 /* CASILLAS */
 .box {
-    width: 60px;
-    height: 60px;
-    font-size: 30px;
+    width: 200px;
+    height: 200px;
+    font-size: 100px;
     font-weight: bold;
-    background-color: #757575;
-    border: 2px solid black;
+    background-color: transparent;
+    border: 3px solid #858585;
+    color: #8f8e8e;
     cursor: pointer;
-
-    /* BOTON */
-    button.btn {
-        font-weight: bold;
-        cursor: pointer;
-    }
-
 }
