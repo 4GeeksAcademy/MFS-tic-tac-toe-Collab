@@ -4,7 +4,13 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-export default function Square() {
-  return <button className="square">X</button>;
-}
+const Home = () =>{
+  return (
+    <div className="my-4">
+      <h1>Tic Tac Toe</h1>
+    </div>
+  );
+};
+export default Home;
+
 

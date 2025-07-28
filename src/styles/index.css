@@ -8,4 +8,28 @@
     
     import 'relative/path/to/stylesheet.scss';
 
-*/
+
+/*TABLERO*/
+.board {
+    display: grid;
+    margin: 20px;
+    justify-content: center;
+}
+
+/* CASILLAS */
+.box {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #757575;
+    border: 2px solid black;
+    cursor: pointer;
+
+    /* BOTON */
+    button.btn {
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+}
