@@ -24,6 +24,7 @@ const getWinner = (squares) => {
   return null;
 };
 
+
 //JUEGO
 const TicTacToe = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -60,7 +61,7 @@ const TicTacToe = () => {
   } else {
     status = `Turno : ${next ? "X" : "O"}`;
   }
-
+  /*console.log(status);*/
   return (
     <div className="game text-center">
       <h3 className={winner ? "winner" : ""}>{status}</h3>
