@@ -49,6 +49,7 @@ const TicTacToe = () => {
   const handleReset = () => {
     setSquares(Array(9).fill(null));
     setNext(true);
+    setWinner(null);
   };
 
   const status = winner

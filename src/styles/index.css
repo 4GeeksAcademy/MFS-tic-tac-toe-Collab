@@ -12,6 +12,7 @@
 /*TABLERO*/
 .board {
     display: grid;
+    grid-template-columns: repeat(3, 60px);
     margin: 20px;
     justify-content: center;
 }
