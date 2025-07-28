@@ -63,15 +63,15 @@ const TicTacToe = () => {
 
   return (
     <div className="game text-center">
-      <h3>{status}</h3>
+      <h3 className={winner ? "winner" : ""}>{status}</h3>
       <div
         className="board">
         {squares.map((val, i) => (
           <Box key={i} value={val} onClick={() => handleClick(i)} />
         ))}
       </div>
-      <button className="btn btn-danger mt-5" onClick={handleReset}>
-        Reiniciar
+      <button className="btn btn-danger mt-4" onClick={handleReset}>
+        Reiniciar Juego
       </button>
     </div>
   );
